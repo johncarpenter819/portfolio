@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
+import Navbar from "../components/Navbar";
 import "../styles/Home.css";
+
+const HEADSHOT_URL = "/headshot.jpeg";
 
 const Home = () => {
   const startDate = new Date("2025-01-31T00:00:00");
@@ -17,20 +20,32 @@ const Home = () => {
       <header className="header-section">
         <h1 className="intro-title">Hi, I'm John Carpenter</h1>
         <h2 className="intro-subtitle">Full Stack JavaScript Developer</h2>
+        <Navbar />
       </header>
 
-      <section className="journey-section">
-        <h3 className="journey-title">My Developer Journey</h3>
-        <p className="journey-description">
-          Time Dedicated to Full Stack Mastery
-        </p>
-        <div className="journey-timer">
-          <span>{timeElapsed.years} Years</span>{" "}
-          <span>{timeElapsed.months} Months</span>{" "}
-          <span>{timeElapsed.days} Days</span>{" "}
-          <span>{timeElapsed.hours} Hours</span>{" "}
+      <div className="visual-journey-container">
+        <div className="headshot-block">
+          <img
+            src={HEADSHOT_URL}
+            alt="John Carpenter Headshot - Full Stack Developer"
+            className="dev-headshot"
+          />
         </div>
-      </section>
+
+        <section className="journey-section">
+          <h3 className="journey-title">My Developer Journey</h3>
+          <p className="journey-description">
+            Time Dedicated to Full Stack Mastery
+          </p>
+          <div className="journey-timer">
+            <span>{timeElapsed.years} Years</span>{" "}
+            <span>{timeElapsed.months} Months</span>{" "}
+            <span>{timeElapsed.days} Days</span>{" "}
+            <span>{timeElapsed.hours} Hours</span>{" "}
+            <span>{timeElapsed.minutes} Minutes</span>{" "}
+          </div>
+        </section>
+      </div>
 
       <section className="summary-section">
         <p className="summary-intro">
