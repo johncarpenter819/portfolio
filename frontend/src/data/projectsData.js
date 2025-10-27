@@ -22,9 +22,7 @@ const projectsData = [
       { name: "CSS", percent: 25.7, color: "#1572b6" },
       { name: "HTML", percent: 0.7, color: "#e34f26" },
     ],
-
-    // videoLink: TDB,
-    visual: "Demo Video Coming Soon",
+    visual: "/messaging-app.png",
   },
   {
     id: 2,
@@ -50,53 +48,30 @@ const projectsData = [
       { name: "CSS", percent: 20.9, color: "#1572b6" },
       { name: "HTML", percent: 0.3, color: "#e34f26" },
     ],
-
-    // videoLink: TDB,
-    visual: "Demo Video Coming Soon",
+    visual: "/odin-book-demo.png",
   },
   {
     id: 3,
-    title: "File Uploader",
+    title: "Level Up Blog",
     keyChallenge:
-      "Designing and implementing a secure, robust, scalable file ingestion pipeline while maintaining strict session-based user authentication.",
+      "Designing and optimizing the back-end infrstructure to aminto performance and handle multi-users communicating at once.",
     description:
-      "A full-stack file management service developed to demonstrate expertise in secure data handling, user session management, and ORM integration. The system features a custom file upload API built on Node.js/Express, utilizing the Multer middleware to manage high-volume multipart form data ingestion. It employs a robust session-based authentication architecture (Passport.js and Express Sessions) to ensure protected resource access and upload authorization. Prisma is used as the ORM to facilitate efficient, type-safe database interactions for persisting file metadata and linking files to specific users. This project validates proficiency in security best practices for file transfer and full-stack development using modern JavaScript tools.",
+      "This is a full-stack social media application designed to showcase advanced proficiency in modern web architecture, data modeling, and secure authentication practices. The front-end, built with React 19 and React Router DOM, delivers a dynamic, single-page application experience for seamless navigation, communicating with the back-end. The Node.js/Express back-end serves as a RESTful API, defining dedicated routes for Authentication, Users, Posts, Comments, and Reactions, and integrates with Prisma ORM for efficient management of the complex relational database schema. Security is prioritized through the use of bcryptjs for password hashing and jsonwebtoken (JWT) for stateless authentication.",
     technologies: [
       "React",
       "Node.js",
       "Express",
       "Prisma",
-      "Passport",
-      "Express-Session",
+      "JWT",
       "Bcrypt",
-      "Multer",
-      "UUID",
+      "CORS",
     ],
     languages: [
-      { name: "JavaScript", percent: 85.1, color: "#f7df1e" },
-      { name: "CSS", percent: 5.9, color: "#1572b6" },
-      { name: "HTML", percent: 9, color: "#e34f26" },
+      { name: "JavaScript", percent: 72.2, color: "#f7df1e" },
+      { name: "CSS", percent: 25.1, color: "#1572b6" },
+      { name: "HTML", percent: 2.7, color: "#e34f26" },
     ],
-
-    // videoLink: TDB,
-    visual: "Demo Video Coming Soon",
-  },
-  {
-    id: 4,
-    title: "Inventory Management Application",
-    keyChallenge:
-      "Architecting a complete, server-rendered MVC application capable of reliably managing complex relational data and ensuring CRUD functionality for inventory items without relying on a separate client-side framework.",
-    description:
-      "A full-stack Inventory Management System built on a classic Node.js/Express MVC (Model-View-Controller) architecture. This project showcases deep competency in developing server-rendered applications using EJS for dynamic, template-based views. It is powered by a PostgreSQL database, demonstrating proficiency in relational data design and direct SQL interaction via the pg driver. The application implements complete CRUD functionality for managing all aspects of inventory, utilizing middleware (method-override, body-parser) to ensure adherence to RESTful conventions for data manipulation. This project validates a strong foundation in backend development, relational database management, and holistic application structuring.",
-    technologies: ["React", "Node.js", "Express", "PostgreSQL"],
-    languages: [
-      { name: "JavaScript", percent: 34.7, color: "#f7df1e" },
-      { name: "CSS", percent: 38.6, color: "#1572b6" },
-      { name: "EJS", percent: 26.7, color: "#e34f26" },
-    ],
-
-    // videoLink: TDB,
-    visual: "Demo Video Coming Soon",
+    visual: "/blog.png",
   },
 ];
 

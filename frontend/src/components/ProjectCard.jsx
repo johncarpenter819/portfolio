@@ -33,10 +33,19 @@ const LanguageBar = ({ languages }) => {
 };
 
 const ProjectCard = ({ project }) => {
+  const isImage = project.visual && project.visual.startsWith("/");
   return (
     <div className="project-card">
       <div className="project-visual-block">
-        <div className="video-placeholder-block">{project.visual}</div>
+        {isImage ? (
+          <img
+            src={project.visual}
+            alt={`${project.title} Demo Screenshot`}
+            className="project-screenshot"
+          />
+        ) : (
+          <div className="video-placeholder-block">{project.visual}</div>
+        )}
       </div>
 
       <div className="project-content">
@@ -58,15 +67,6 @@ const ProjectCard = ({ project }) => {
               {project.technologies.join(" / ")}
             </span>
           </div>
-
-          <a
-            href={project.videoLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="video-link-btn"
-          >
-            Watch Demo 🎬
-          </a>
         </div>
       </div>
     </div>
