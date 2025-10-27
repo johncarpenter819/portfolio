@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
+import ContactForm from "../components/ContactForm";
 import "../styles/Home.css";
 
 const HEADSHOT_URL = "/headshot.jpeg";
@@ -7,6 +8,7 @@ const HEADSHOT_URL = "/headshot.jpeg";
 const Home = () => {
   const startDate = new Date("2025-01-31T00:00:00");
   const [timeElapsed, setTimeElapsed] = useState(getTimeElapsed(startDate));
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,6 +19,11 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      {isContactModalOpen && (
+        <div className="form-container">
+          <ContactForm onClose={() => setIsContactModalOpen(false)} />
+        </div>
+      )}
       <header className="header-section">
         <h1 className="intro-title">Hi, I'm John Carpenter</h1>
         <h2 className="intro-subtitle">Full Stack JavaScript Developer</h2>
@@ -149,7 +156,12 @@ const Home = () => {
         <div className="contact-card">
           <h3>Contact Me</h3>
           <p>Have a question, opportunity, or just want to connect?</p>
-          <button className="contact-btn">Let's Connect</button>
+          <button
+            className="contact-btn"
+            onClick={() => setIsContactModalOpen(true)}
+          >
+            Let's Connect
+          </button>
         </div>
 
         <div className="quote-card">
