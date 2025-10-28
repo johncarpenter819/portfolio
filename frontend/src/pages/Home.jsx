@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import ContactForm from "../components/ContactForm";
+import QuoteForm from "../components/QuoteForm";
 import "../styles/Home.css";
 
 const HEADSHOT_URL = "/headshot.jpeg";
@@ -9,6 +10,7 @@ const Home = () => {
   const startDate = new Date("2025-01-31T00:00:00");
   const [timeElapsed, setTimeElapsed] = useState(getTimeElapsed(startDate));
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,6 +26,13 @@ const Home = () => {
           <ContactForm onClose={() => setIsContactModalOpen(false)} />
         </div>
       )}
+
+      {isQuoteModalOpen && (
+        <div className="form-container">
+          <QuoteForm onClose={() => setIsQuoteModalOpen(false)} />
+        </div>
+      )}
+
       <header className="header-section">
         <h1 className="intro-title">Hi, I'm John Carpenter</h1>
         <h2 className="intro-subtitle">Full Stack JavaScript Developer</h2>
@@ -110,7 +119,7 @@ const Home = () => {
             <ul>
               <li>HTML5</li>
               <li>CSS</li>
-              <li>Git/Github</li>
+              <li>Git/ Github</li>
               <li>DOM Manipulation</li>
               <li>ES6+</li>
               <li>Testing (Jest)</li>
@@ -142,8 +151,8 @@ const Home = () => {
           <div className="curriculum-block">
             <h4>Tooling & Best Practices</h4>
             <ul>
-              <li>Webpack/Vite</li>
-              <li>ESLint/Prettier</li>
+              <li>Webpack/ Vite</li>
+              <li>ESLint/ Prettier</li>
               <li>Async/ Await</li>
               <li>Test-Driven Development (TDD)</li>
               <li>Responsive Design</li>
@@ -167,7 +176,12 @@ const Home = () => {
         <div className="quote-card">
           <h3>Request a Quote</h3>
           <p>Need a solution? Let's bring your ideas to life!</p>
-          <button className="quote-btn">Request a Quote</button>
+          <button
+            className="quote-btn"
+            onClick={() => setIsQuoteModalOpen(true)}
+          >
+            Request a Quote
+          </button>
         </div>
       </section>
     </div>

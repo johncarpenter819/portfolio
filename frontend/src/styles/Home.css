@@ -314,7 +314,8 @@
 .contact-form input[type="text"],
 .contact-form input[type="tel"],
 .contact-form input[type="email"],
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
   width: 100%;
   padding: 12px;
   border: 1px solid var(--color-primary-light);
@@ -340,6 +341,7 @@
 .contact-form textarea {
   resize: vertical;
   min-height: 120px;
+  width: 100%;
 }
 .contact-form button[type="submit"] {
   width: 100%;
