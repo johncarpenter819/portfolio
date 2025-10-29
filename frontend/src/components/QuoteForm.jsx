@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const PROJECT_TYPES = [
   "Select Project Type",
@@ -11,7 +12,12 @@ const PROJECT_TYPES = [
   "Other",
 ];
 
+const SERVICE_ID = "contact_service";
+const TEMPLATE_ID = "request_quote";
+const PUBLIC_KEY = "2uYmi4KrvTkVbfniF";
+
 const QuoteForm = ({ onClose }) => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -37,14 +43,25 @@ const QuoteForm = ({ onClose }) => {
       return;
     }
 
-    try {
-      const response = await fetch("api/request-quote", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+    const templateParams = {
+      name: `${formData.firstName} ${formData.lastName}`,
+      reply_email: formData.email,
+      phone: formData.phone,
+      project_type: formData.projectType,
+      budget: formData.budget,
+      details: formData.details,
+      time: new Date().toLocaleString(),
+    };
 
-      if (response.ok) {
+    try {
+      const response = await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        templateParams,
+        PUBLIC_KEY
+      );
+
+      if (response.status === 200) {
         setStatus("success");
         setFormData({
           firstName: "",
@@ -57,7 +74,10 @@ const QuoteForm = ({ onClose }) => {
         });
         setTimeout(onClose, 3000);
       } else {
-        setStatus("error: Quote submission failed.");
+        console.error("EmailJS Quote Error:", response.text);
+        setStatus(
+          `error: Quote submission failed (Status: ${response.status}).`
+        );
       }
     } catch (error) {
       console.error("submission error:", error);
@@ -79,7 +99,7 @@ const QuoteForm = ({ onClose }) => {
       )}
       {status.startsWith("error") && <p className="error-msg">❌ {status}</p>}
 
-      <form onSubmit={handleSubmit}>
+      <form ref={form} onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="firstName">First Name</label>
           <input

@@ -1,6 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+
+const SERVICE_ID = "contact_service";
+const TEMPLATE_ID = "contact_form";
+const PUBLIC_KEY = "2uYmi4KrvTkVbfniF";
 
 const ContactForm = ({ onClose }) => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -20,14 +26,24 @@ const ContactForm = ({ onClose }) => {
     e.preventDefault();
     setStatus("submitting");
 
-    try {
-      const response = await fetch("api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+    const templateParams = {
+      name: `${formData.firstName} ${formData.lastName}`,
+      reply_email: formData.email,
+      company: formData.company || "N/A",
+      phone: formData.phone,
+      message: formData.message,
+      time: new Date().toLocaleString(),
+    };
 
-      if (response.ok) {
+    try {
+      const response = await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        templateParams,
+        PUBLIC_KEY
+      );
+
+      if (response.status === 200) {
         setStatus("success");
         setFormData({
           firstName: "",
@@ -39,11 +55,11 @@ const ContactForm = ({ onClose }) => {
         });
         setTimeout(onClose, 3000);
       } else {
-        const errorData = await response.json();
-        setStatus(`error: ${errorData.message || "Submission failed."}`);
+        console.error("EmailJS Error:", response.text);
+        setStatus(`error: Failed to send (Status: ${response.status}).`);
       }
     } catch (error) {
-      console.error("submission error:", error);
+      console.error("Submission Error:", error);
       setStatus("error: Network error or server issue.");
     }
   };
@@ -60,7 +76,7 @@ const ContactForm = ({ onClose }) => {
       )}
       {status.startsWith("error") && <p className="error-msg">❌ {status}</p>}
 
-      <form onSubmit={handleSubmit}>
+      <form ref={form} onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="firstName">First Name</label>
           <input
