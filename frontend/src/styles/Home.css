@@ -1,13 +1,14 @@
 .home-container {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
   animation: fadeIn 1.5s ease-out;
 }
 .intro-title {
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   margin-bottom: 0.5rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  font-weight: 800;
+  letter-spacing: -1px;
   animation: slideInLeft 1s ease-out;
 }
 .intro-subtitle {
@@ -16,8 +17,8 @@
   color: #555;
   margin-top: 0;
   margin-bottom: 40px;
-  border-bottom: 2px solid var(--color-primary-light);
-  padding-bottom: 10px;
+  border-bottom: 3px solid var(--color-primary-light);
+  padding-bottom: 12px;
   display: inline-block;
   animation: slideInRight 1s ease-out;
 }
@@ -44,34 +45,39 @@
 .journey-section {
   text-align: center;
   background: linear-gradient(145deg, var(--color-background), #e9f8f8);
-  padding: 30px;
+  padding: 40px;
   border: 1px solid var(--color-primary-light);
   box-shadow: 0 10px 30px var(--color-shadow);
   border-radius: 12px;
   transform: translateY(0);
   transition: transform 0.3s ease-in-out;
-  max-width: 1300px;
-  justify-self: center;
+  max-width: 1000px;
+  margin: 40px auto;
 }
 .visual-journey-container {
-  display: flex;
-  gap: 800px;
+  display: grid;
+  grid-template-columns: 300px, 1fr;
+  gap: 40px;
   align-items: center;
-  margin-top: 20px;
-  margin-bottom: 80px;
+  text-align: left;
+  margin-top: 30px;
+}
+.journey-info {
+  padding-left: 20px;
 }
 .headshot-block {
   flex-shrink: 0;
-  width: 280px;
-  height: 280px;
-  box-shadow: var(--color-shadow);
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 5px 20px var(--color-shadow);
   border-radius: 50%;
   overflow: hidden;
   border: 6px solid var(--color-primary-dark);
   transition: transform 0.3s ease-in-out;
+  justify-self: center;
 }
 .headshot-block:hover {
-  transform: scale(1.03);
+  transform: scale(1.03) rotate(1deg);
 }
 .dev-headshot {
   width: 100%;
@@ -84,13 +90,15 @@
   box-shadow: 0 15px 40px var(--color-shadow);
 }
 .journey-title {
-  font-size: 2rem;
-  margin-bottom: 5px;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: var(--color-primary-dark);
 }
 .journey-description {
-  font-style: italic;
+  font-style: normal;
   color: #666;
   margin-top: 0;
+  font-size: 1.1rem;
 }
 .journey-timer {
   font-family: monospace;
@@ -101,7 +109,7 @@
 }
 .journey-timer span {
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 5px 8px 5px;
   padding: 5px 10px;
   background-color: var(--color-primary-light);
   border-radius: 6px;
@@ -119,14 +127,18 @@
   }
 }
 .summary-section {
-  padding: 40px 0;
+  padding: 60px 0;
   margin-bottom: 30px;
-  max-width: 2450px;
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  text-align: center;
 }
 .summary-section h3 {
+  font-size: 2rem;
   margin-top: 0;
+  margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 2px solid var(--color-primary-light);
+  border-bottom: 3px solid var(--color-primary-light);
   display: inline-block;
 }
 .summary-intro {
@@ -138,45 +150,54 @@
 }
 .summary-intro strong {
   color: var(--color-primary-dark);
-  font-weight: 700;
+  font-weight: 800;
 }
+.summary-intro,
 .summary-intro-text,
 .summary-closing-text,
 .summary-description {
-  line-height: 1.8;
-  font-size: 1.15rem;
-  margin-bottom: 20px;
-  text-align: justify;
-  text-justify: inter-word;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  text-align: left;
 }
 .summary-skills {
-  margin: 20px 0 40px 20px;
-  padding: 0;
-  list-style-type: disc;
-  font-size: 1.15rem;
+  margin: 30px 0 50px 0;
+  padding-left: 20px;
+  list-style-type: none;
+  font-size: 1.1rem;
+  text-align: left;
 }
 .summary-skills strong {
   color: var(--color-primary-dark);
+  font-weight: 700;
+}
+.summary-skills li:before {
+  content: "⚡";
+  color: var(--color-text-dark);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 .summary-skills li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .curriculum-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 .curriculum-block {
-  padding: 15px;
+  padding: 25px;
   background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px var(--color-shadow);
-  border-left: 5px solid var(--color-primary-dark);
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid var(--color-primary-dark);
   transition: all 0.3s ease-in-out;
   opacity: 0;
   animation: slideInUp 0.6s ease-out forwards;
-  background-color: rgba(255, 255, 255, 0.95);
+  /* background-color: rgba(255, 255, 255, 0.95); */
 }
 .curriculum-block:nth-child(1) {
   animation-delay: 0.4s;
@@ -202,7 +223,7 @@
 }
 .curriculum-block:hover {
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 15px 30px var(--color-shadow);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
   border-left-color: var(--color-primary-light);
 }
 .curriculum-block h4 {
@@ -210,13 +231,16 @@
   margin-top: 0;
   margin-bottom: 15px;
   color: var(--color-primary-dark);
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
 }
 .curriculum-block ul {
   padding: 0;
   margin: 0;
+  list-style-type: none;
 }
 .curriculum-block li {
-  padding: 5px 0;
+  padding: 6px 0;
   border-bottom: 1px dotted var(--color-primary-light);
   font-size: 0.95rem;
   list-style-type: none;
@@ -227,17 +251,18 @@
 .contact-section {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin-top: 50px;
+  gap: 40px;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 .contact-card,
 .quote-card {
   max-width: 500px;
   flex: 1;
   text-align: center;
-  padding: 40px 20px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px var(--color-shadow);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   border-top: 5px solid var(--color-primary-dark);
   transition: all 0.3s ease-in-out;
@@ -364,6 +389,24 @@
     font-size: 1.5rem;
   }
   .curriculum-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768) {
+  .visual-journey-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+  .journey-info {
+    padding-left: 0;
+    text-align: center;
+  }
+  .headshot-block {
+    margin: 0 auto;
+  }
+  .curriculum-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
@@ -371,6 +414,16 @@
 @media (max-width: 600px) {
   .home-container {
     padding: 20px 15px;
+  }
+  .journey-title {
+    font-size: 2rem;
+  }
+  .summary-section {
+    padding: 40px 0;
+  }
+  .curriculum-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
   .intro-title {
     font-size: 2.5rem;

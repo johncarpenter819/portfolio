@@ -2,6 +2,7 @@
   margin: 0 auto;
   padding: 40px 20px;
   max-width: 1200px;
+  animation: fadeIn 1.5s ease-out;
 }
 .section-title {
   font-size: 2.5rem;
