@@ -186,6 +186,43 @@ const Freelance = ({ onQuoteRequest }) => {
           </div>
         </div>
       </section>
+
+      <section className="live-projects-section">
+        <h2 className="section-title">Live Work & Client Builds</h2>
+        <p className="section-description">
+          Here are a few Projects currently in development or recently deployed
+          for clients. Each link opens a live, production environment.
+        </p>
+
+        <div className="projects-grid">
+          {[
+            {
+              name: "Ricki Roberts Hair Studio",
+              description:
+                "A booking and team management web app for a beauty salon business. Built with React, Node.js, and Firebase - featuring real-time scheduling, service management, and automated review approval.",
+              link: "https://ricki-roberts-hair-studio.vercel.app/",
+              image: "/rrhs-live.png",
+            },
+          ].map((project, index) => (
+            <a
+              key={index}
+              href={project.link}
+              className="freelance-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={project.image}
+                alt={project.name}
+                className="project-image"
+              />
+              <h3 className="project-name">{project.name}</h3>
+              <p className="project-description">{project.description}</p>
+              <span className="project-link">View Live</span>
+            </a>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };
