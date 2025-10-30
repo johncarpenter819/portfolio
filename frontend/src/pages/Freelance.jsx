@@ -180,7 +180,7 @@ const Freelance = ({ onQuoteRequest }) => {
             <h3>Post-Launch Assurance</h3>
             <p>
               Receive a complimentary support window after deployment to handle
-              any unforeseen bugs or minor adjustments. You success is the
+              any unforeseen bugs or minor adjustments. Your success is the
               launchpad, not the finish line.
             </p>
           </div>

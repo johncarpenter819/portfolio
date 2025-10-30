@@ -63,7 +63,7 @@ const ExperienceSection = () => {
 
       <div className="job-entry">
         <h3 className="job-header">
-          <span className="job-title">Mobility Enigneer</span> | Spirent |{" "}
+          <span className="job-title">Mobility Engineer</span> | Spirent |{" "}
           <span className="job-dates">2012-2016</span>
         </h3>
         <ul className="job-bullets">
