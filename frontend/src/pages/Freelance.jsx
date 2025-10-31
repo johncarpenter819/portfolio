@@ -187,7 +187,7 @@ const Freelance = ({ onQuoteRequest }) => {
         </div>
       </section>
 
-      <section className="live-projects-section">
+      {/* <section className="live-projects-section">
         <h2 className="section-title">Live Work & Client Builds</h2>
         <p className="section-description">
           Here are a few Projects currently in development or recently deployed
@@ -222,7 +222,7 @@ const Freelance = ({ onQuoteRequest }) => {
             </a>
           ))}
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
