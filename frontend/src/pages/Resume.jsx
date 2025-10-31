@@ -15,19 +15,34 @@ const ExperienceSection = () => {
         </h3>
         <ul className="job-bullets">
           <li>
-            Directed the full product lifecycle as the main customer liaison,
-            managing proposals, ordering, scheduling, and delivery to ensure
-            overall customer satisfaction and program profitability.
+            Directed the full product lifecycle as the primary customer liaison,
+            managing proposals, procurement, scheduling, and delivery to ensure
+            customer satisfaction and program profitability.
           </li>
           <li>
-            Managed and streamlined the New Product Introduction (NPI) process
-            by collaborating with Engineering, Manufacturing, PCB Design, and
-            Quality teams to ensure on-time and on-budget product launch.
+            Managed a portfolio of 20–30 concurrent projects spanning New
+            Product Introduction (NPI) through established production for 8–10
+            client companies, overseeing $1–2M in total program value.
           </li>
           <li>
-            Mitigated financial and compliance risk by performing detailed
-            contract review of all customer purchase orders and proactively
-            monitoring the disposition of excess, orphan, and obsolete material.
+            Streamlined the NPI process by collaborating across Engineering,
+            Manufacturing, PCB Design, and Quality teams, achieving consistent
+            on-time and on-budget product launches.
+          </li>
+          <li>
+            Mitigated financial and compliance risks through detailed contract
+            reviews and proactive oversight of excess, orphaned, and obsolete
+            materials.
+          </li>
+          <li>
+            Implemented improved tracking and reporting processes that increased
+            operational visibility and strengthened cross-department
+            coordination.
+          </li>
+          <li>
+            Built strong relationships with key clients, ensuring alignment
+            between technical execution, business objectives, and manufacturing
+            capabilities.
           </li>
         </ul>
       </div>
@@ -44,19 +59,36 @@ const ExperienceSection = () => {
             requirements, resulting in direct revenue contribution.
           </li>
           <li>
-            Developed and managed the departmental budget and resource
-            allocation, ensuring optimal use of funds and personnel to meet
-            strategic objectives.
+            Managed benchmarking programs across 120 U.S. markets, conducting
+            biannual testing cycles and expanding operations internationally
+            through pilot launches in Canada, the U.K., and Japan.
           </li>
           <li>
-            Managed the full project lifecycle for complex domestic and global
-            IoT programs and testing platforms, from requirements definition to
-            final delivery.
+            Led and coordinated cross-functional teams of 28 professionals,
+            including 15 engineers, 7 product managers, and 6 reporting
+            analysts, ensuring seamless collaboration and on-time delivery
+            across global initiatives.
           </li>
           <li>
-            Cultivated robust international team partnerships and worked closely
-            with Engineering and Sales teams to ensure project success and
-            stakeholder alignment.
+            Optimized departmental budget and resource utilization, adhering to
+            financial targets while achieving a 40% reduction in data storage
+            costs (~$120K annual savings).
+          </li>
+          <li>
+            Designed and implemented a hybrid data storage architecture
+            combining RAID-protected on-premise storage and distributed SSDs for
+            engineers, enhancing data security, redundancy, and scalability.
+          </li>
+          <li>
+            Oversaw the full project lifecycle for complex domestic and
+            international IoT benchmarking and testing platforms — from
+            requirements definition through deployment — ensuring technical
+            accuracy and stakeholder alignment.
+          </li>
+          <li>
+            Cultivated strong domestic and international partnerships across
+            Engineering, Sales, and Product teams, fostering transparent
+            communication and accountability.
           </li>
         </ul>
       </div>
