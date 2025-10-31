@@ -14,7 +14,8 @@ body {
   color: var(--color-text-dark);
   background-color: var(--color-background);
   min-height: 100vh;
-  background-image: url(/main-content-bg.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/main-content-bg-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

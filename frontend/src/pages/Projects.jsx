@@ -7,7 +7,7 @@ import "../styles/Projects.css";
 const Projects = () => {
   return (
     <div className="projects-page-container">
-      <Navbar />
+      {/* <Navbar /> */}
 
       <header className="projects-header">
         <h1 className="projects-title">Portfolio of Full Stack Projects</h1>

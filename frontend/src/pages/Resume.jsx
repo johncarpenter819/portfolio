@@ -6,12 +6,12 @@ const ExperienceSection = () => {
   return (
     <section className="resume-experience-section">
       <h2 className="section-title">Experience</h2>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className="job-entry">
         <h3 className="job-header">
-          <span className="job-title">Program Manager</span> | ACDi (Electronics
-          Manufacturing) | <span className="job-dates">2022-2024</span>
+          <span className="job-title">Program Manager</span> ACDi (Electronics
+          Manufacturing) <span className="job-dates">2022-2024</span>
         </h3>
         <ul className="job-bullets">
           <li>
@@ -49,7 +49,7 @@ const ExperienceSection = () => {
 
       <div className="job-entry">
         <h3 className="job-header">
-          <span className="job-title">Program Manager</span> | Spirent |{" "}
+          <span className="job-title">Program Manager</span> Spirent{" "}
           <span className="job-dates">2019-2022</span>
         </h3>
         <ul className="job-bullets">
@@ -95,7 +95,7 @@ const ExperienceSection = () => {
 
       <div className="job-entry">
         <h3 className="job-header">
-          <span className="job-title">Mobility Engineer</span> | Spirent |{" "}
+          <span className="job-title">Mobility Engineer</span> Spirent{" "}
           <span className="job-dates">2012-2016</span>
         </h3>
         <ul className="job-bullets">

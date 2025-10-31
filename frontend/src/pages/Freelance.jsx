@@ -113,9 +113,8 @@ const Freelance = ({ onQuoteRequest }) => {
           and beautifully designed full-stack solutions tailored to your
           business goals.
         </p>
-        <Navbar />
       </section>
-
+      {/* <Navbar /> */}
       <section className="services-section">
         <h2 className="section-title">Core Development Services</h2>
         <p className="section-description">

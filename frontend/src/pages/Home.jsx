@@ -36,7 +36,7 @@ const Home = () => {
       <header className="header-section">
         <h1 className="intro-title">Hi, I'm John Carpenter</h1>
         <h2 className="intro-subtitle">Full Stack JavaScript Developer</h2>
-        <Navbar />
+        {/* <Navbar /> */}
       </header>
 
       <div className="visual-journey-container">
@@ -58,7 +58,7 @@ const Home = () => {
             <span>{timeElapsed.months} Months</span>{" "}
             <span>{timeElapsed.days} Days</span>{" "}
             <span>{timeElapsed.hours} Hours</span>{" "}
-            <span>{timeElapsed.minutes} Minutes</span>{" "}
+            {/* <span>{timeElapsed.minutes} Minutes</span>{" "} */}
           </div>
         </section>
       </div>
@@ -99,19 +99,19 @@ const Home = () => {
           </li>
         </ul>
 
-        <p className="summary-closing-text">
+        {/* <p className="summary-closing-text">
           I am actively applying this comprehensive skill set to modern software
           development- eager to contribute not only clean, efficient code but
           also proven leadership and systemic thinking that instantly elevates
           my performance. Ready to turn complex problems into elegant software
           solutions!
-        </p>
+        </p> */}
 
         <h3>The Odin Project: Full Stack JavaScript Curriculum Mastery</h3>
-        <p className="summary-description">
+        {/* <p className="summary-description">
           A comprehensive, project-based breakdown of the technology and
           concepts mastered.
-        </p>
+        </p> */}
 
         <div className="curriculum-grid">
           <div className="curriculum-block">
