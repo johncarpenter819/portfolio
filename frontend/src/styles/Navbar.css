@@ -29,15 +29,16 @@
 @media (max-width: 600px) {
   .navbar-component {
     position: static;
+    top: 0;
+    left: 0;
+    right: 0;
     flex-direction: row;
     align-items: center;
     width: 100%;
     padding: 10px 20px;
     box-shadow: var(--color-shadow);
-    background-color: var(--color-background);
+    /* background-color: var(--color-background); */
     justify-content: space-around;
-    margin-bottom: 20px;
-    top: auto;
-    right: auto;
+    margin-bottom: 0;
   }
 }

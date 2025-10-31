@@ -73,6 +73,8 @@
   .section-title {
     font-size: 2rem;
     margin-bottom: 1.4rem;
+    padding: 20px 15px;
+    padding-top: 80px;
   }
   .navbar-component {
     gap: 1rem;
