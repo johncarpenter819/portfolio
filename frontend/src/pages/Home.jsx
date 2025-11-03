@@ -20,7 +20,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home-container">
+    <>
       {isContactModalOpen && (
         <div className="form-container">
           <ContactForm onClose={() => setIsContactModalOpen(false)} />
@@ -33,73 +33,74 @@ const Home = () => {
         </div>
       )}
 
-      <header className="header-section">
-        <h1 className="intro-title">Hi, I'm John Carpenter</h1>
-        <h2 className="intro-subtitle">Full Stack JavaScript Developer</h2>
-        {/* <Navbar /> */}
-      </header>
+      <div className="home-container">
+        <header className="header-section">
+          <h1 className="intro-title">Hi, I'm John Carpenter</h1>
+          <h2 className="intro-subtitle">Full Stack JavaScript Developer</h2>
+          {/* <Navbar /> */}
+        </header>
 
-      <div className="visual-journey-container">
-        <div className="headshot-block">
-          <img
-            src={HEADSHOT_URL}
-            alt="John Carpenter Headshot - Full Stack Developer"
-            className="dev-headshot"
-          />
+        <div className="visual-journey-container">
+          <div className="headshot-block">
+            <img
+              src={HEADSHOT_URL}
+              alt="John Carpenter Headshot - Full Stack Developer"
+              className="dev-headshot"
+            />
+          </div>
+
+          <section className="journey-section">
+            <h3 className="journey-title">My Developer Journey</h3>
+            <p className="journey-description">
+              Time Dedicated to Full Stack Mastery
+            </p>
+            <div className="journey-timer">
+              <span>{timeElapsed.years} Years</span>{" "}
+              <span>{timeElapsed.months} Months</span>{" "}
+              <span>{timeElapsed.days} Days</span>{" "}
+              <span>{timeElapsed.hours} Hours</span>{" "}
+              {/* <span>{timeElapsed.minutes} Minutes</span>{" "} */}
+            </div>
+          </section>
         </div>
 
-        <section className="journey-section">
-          <h3 className="journey-title">My Developer Journey</h3>
-          <p className="journey-description">
-            Time Dedicated to Full Stack Mastery
+        <section className="summary-section">
+          <p className="summary-intro">
+            A dynamic and highly experienced professional evolving into{" "}
+            <strong>Software Development</strong> with a 12-year foundation in
+            the high-stakes environments of <strong>Telecommunications</strong>{" "}
+            and <strong>Electronic Manufacturing</strong>. I bring unique
+            perspective for my Full-Stack professional journey with an
+            understanding of the bridge between software development and complex
+            hardware systems. My background includes{" "}
+            <strong>
+              7 years of specialized Program Management experience, 5 in Telecom
+              and 2 in Electronics Manufacturing.
+            </strong>{" "}
+            I successfully delivered large-scale, mission-critical products and
+            mobility testing metrics from concept to market. I now offer a
+            Program Manager and Software Developer perspective grounded in a
+            deep understanding of:
           </p>
-          <div className="journey-timer">
-            <span>{timeElapsed.years} Years</span>{" "}
-            <span>{timeElapsed.months} Months</span>{" "}
-            <span>{timeElapsed.days} Days</span>{" "}
-            <span>{timeElapsed.hours} Hours</span>{" "}
-            {/* <span>{timeElapsed.minutes} Minutes</span>{" "} */}
-          </div>
-        </section>
-      </div>
 
-      <section className="summary-section">
-        <p className="summary-intro">
-          A dynamic and highly experienced professional evolving into{" "}
-          <strong>Software Development</strong> with a 12-year foundation in the
-          high-stakes environments of <strong>Telecommunications</strong> and{" "}
-          <strong>Electronic Manufacturing</strong>. I bring unique perspective
-          for my Full-Stack professional journey with an understanding of the
-          bridge between software development and complex hardware systems. My
-          background includes{" "}
-          <strong>
-            7 years of specialized Program Management experience, 5 in Telecom
-            and 2 in Electronics Manufacting.
-          </strong>{" "}
-          I successfully delivered large-scale, mission-critical products and
-          mobility testing metrics from concept to market. I now offer a Program
-          Manager and Software Developer perspective grounded in a deep
-          understanding of:
-        </p>
+          <ul className="summary-skills">
+            <li>
+              <strong>System Architecture:</strong> How software integrates with
+              hardware and infrastructure.{" "}
+            </li>
 
-        <ul className="summary-skills">
-          <li>
-            <strong>System Architecture:</strong> How software integrates with
-            hardware and infrastructure.{" "}
-          </li>
+            <li>
+              <strong>Project Delivery:</strong> Agile methodologies,
+              stakeholder management, risk mitigation, and on-time execution.{" "}
+            </li>
 
-          <li>
-            <strong>Project Delivery:</strong> Agile methodologies, stakeholder
-            management, risk mitigation, and on-time execution.{" "}
-          </li>
+            <li>
+              <strong>Business Acumen:</strong> The financial and operational
+              impact of technical decisions.
+            </li>
+          </ul>
 
-          <li>
-            <strong>Business Acumen:</strong> The financial and operational
-            impact of technical decisions.
-          </li>
-        </ul>
-
-        {/* <p className="summary-closing-text">
+          {/* <p className="summary-closing-text">
           I am actively applying this comprehensive skill set to modern software
           development- eager to contribute not only clean, efficient code but
           also proven leadership and systemic thinking that instantly elevates
@@ -107,84 +108,85 @@ const Home = () => {
           solutions!
         </p> */}
 
-        <h3>The Odin Project: Full Stack JavaScript Curriculum Mastery</h3>
-        {/* <p className="summary-description">
+          <h3>The Odin Project: Full Stack JavaScript Curriculum Mastery</h3>
+          {/* <p className="summary-description">
           A comprehensive, project-based breakdown of the technology and
           concepts mastered.
         </p> */}
 
-        <div className="curriculum-grid">
-          <div className="curriculum-block">
-            <h4>Foundations & Intermediate JS</h4>
-            <ul>
-              <li>HTML5</li>
-              <li>CSS</li>
-              <li>Git/ Github</li>
-              <li>DOM Manipulation</li>
-              <li>ES6+</li>
-              <li>Testing (Jest)</li>
-            </ul>
+          <div className="curriculum-grid">
+            <div className="curriculum-block">
+              <h4>Foundations & Intermediate JS</h4>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>Git/ Github</li>
+                <li>DOM Manipulation</li>
+                <li>ES6+</li>
+                <li>Testing (Jest)</li>
+              </ul>
+            </div>
+
+            <div className="curriculum-block">
+              <h4>Front-End: React Mastery</h4>
+              <ul>
+                <li>Hooks (useState, useEffect, useMemo)</li>
+                <li>Components</li>
+                <li>Routing</li>
+                <li>State Management (Context)</li>
+                <li>Performance Optimization</li>
+              </ul>
+            </div>
+
+            <div className="curriculum-block">
+              <h4>Back-End: Node & Express</h4>
+              <ul>
+                <li>Node.js (Server Setup)</li>
+                <li>Express.js (Routing)</li>
+                <li>Rest APIs</li>
+                <li>Authentication (JWT/Passport)</li>
+                <li>MongoDB/Mongoose</li>
+              </ul>
+            </div>
+
+            <div className="curriculum-block">
+              <h4>Tooling & Best Practices</h4>
+              <ul>
+                <li>Webpack/ Vite</li>
+                <li>ESLint/ Prettier</li>
+                <li>Async/ Await</li>
+                <li>Test-Driven Development (TDD)</li>
+                <li>Responsive Design</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="contact-section">
+          <div className="contact-card">
+            <h3>Contact Me</h3>
+            <p>Have a question, opportunity, or just want to connect?</p>
+            <button
+              className="contact-btn"
+              onClick={() => setIsContactModalOpen(true)}
+            >
+              Let's Connect
+            </button>
           </div>
 
-          <div className="curriculum-block">
-            <h4>Front-End: React Mastery</h4>
-            <ul>
-              <li>Hooks (useState, useEffect, useMemo)</li>
-              <li>Components</li>
-              <li>Routing</li>
-              <li>State Management (Context)</li>
-              <li>Performance Optimization</li>
-            </ul>
+          <div className="quote-card">
+            <h3>Request a Quote</h3>
+            <p>Need a solution? Let's bring your ideas to life!</p>
+            <button
+              className="quote-btn"
+              onClick={() => setIsQuoteModalOpen(true)}
+            >
+              Request a Quote
+            </button>
           </div>
-
-          <div className="curriculum-block">
-            <h4>Back-End: Node & Express</h4>
-            <ul>
-              <li>Node.js (Server Setup)</li>
-              <li>Express.js (Routing)</li>
-              <li>Rest APIs</li>
-              <li>Authentication (JWT/Passport)</li>
-              <li>MongoDB/Mongoose</li>
-            </ul>
-          </div>
-
-          <div className="curriculum-block">
-            <h4>Tooling & Best Practices</h4>
-            <ul>
-              <li>Webpack/ Vite</li>
-              <li>ESLint/ Prettier</li>
-              <li>Async/ Await</li>
-              <li>Test-Driven Development (TDD)</li>
-              <li>Responsive Design</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="contact-section">
-        <div className="contact-card">
-          <h3>Contact Me</h3>
-          <p>Have a question, opportunity, or just want to connect?</p>
-          <button
-            className="contact-btn"
-            onClick={() => setIsContactModalOpen(true)}
-          >
-            Let's Connect
-          </button>
-        </div>
-
-        <div className="quote-card">
-          <h3>Request a Quote</h3>
-          <p>Need a solution? Let's bring your ideas to life!</p>
-          <button
-            className="quote-btn"
-            onClick={() => setIsQuoteModalOpen(true)}
-          >
-            Request a Quote
-          </button>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 
