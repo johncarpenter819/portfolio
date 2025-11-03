@@ -10,8 +10,8 @@ const ExperienceSection = () => {
 
       <div className="job-entry">
         <h3 className="job-header">
-          <span className="job-title">Program Manager</span> ACDi (Electronics
-          Manufacturing) <span className="job-dates">2022-2024</span>
+          <span className="job-title">Program Manager</span> ACDi{" "}
+          <span className="job-dates">2022-2024</span>
         </h3>
         <ul className="job-bullets">
           <li>
