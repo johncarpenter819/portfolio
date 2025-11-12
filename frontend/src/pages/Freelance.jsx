@@ -115,6 +115,44 @@ const Freelance = ({ onQuoteRequest }) => {
         </p>
       </section>
       {/* <Navbar /> */}
+
+      <section className="live-projects-section">
+        <h2 className="section-title">Live Work & Client Builds</h2>
+        <p className="section-description">
+          Here are a few Projects currently in development or recently deployed
+          for clients. Each link opens a live, production environment.
+        </p>
+
+        <div className="projects-grid">
+          {[
+            {
+              name: "PaxTerra",
+              description:
+                "This project involved designing and building a user-centric website aimed at converting visitors into quote requests for a local arboricultural business. The design successfully marries a strong, authoritative green and orange color scheme with clear, easy-to-read typography (Lora and Poppins). The architecture uses a modular CSS approach across distinct components (Hero, About, Gallery, Testimonials, Footer) to ensure maintainability. Critical elements include prominent CTAs with quote forms and two dedicated CTA strip, all designed to guide the user towards booking a service.",
+              link: "https://paxterra.vercel.app/",
+              image: "/paxterra-bg.png",
+            },
+          ].map((project, index) => (
+            <a
+              key={index}
+              href={project.link}
+              className="freelance-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={project.image}
+                alt={project.name}
+                className="project-image"
+              />
+              <h3 className="project-name">{project.name}</h3>
+              <p className="project-description">{project.description}</p>
+              <span className="project-link">View Live</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <section className="services-section">
         <h2 className="section-title">Core Development Services</h2>
         <p className="section-description">
@@ -185,43 +223,6 @@ const Freelance = ({ onQuoteRequest }) => {
           </div>
         </div>
       </section>
-
-      {/* <section className="live-projects-section">
-        <h2 className="section-title">Live Work & Client Builds</h2>
-        <p className="section-description">
-          Here are a few Projects currently in development or recently deployed
-          for clients. Each link opens a live, production environment.
-        </p>
-
-        <div className="projects-grid">
-          {[
-            {
-              name: "Ricki Roberts Hair Studio",
-              description:
-                "A booking and team management web app for a beauty salon business. Built with React, Node.js, and Firebase - featuring real-time scheduling, service management, and automated review approval.",
-              link: "https://ricki-roberts-hair-studio.vercel.app/",
-              image: "/rrhs-live.png",
-            },
-          ].map((project, index) => (
-            <a
-              key={index}
-              href={project.link}
-              className="freelance-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={project.image}
-                alt={project.name}
-                className="project-image"
-              />
-              <h3 className="project-name">{project.name}</h3>
-              <p className="project-description">{project.description}</p>
-              <span className="project-link">View Live</span>
-            </a>
-          ))}
-        </div>
-      </section> */}
     </div>
   );
 };

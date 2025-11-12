@@ -35,11 +35,12 @@
   margin-bottom: 20px;
   border-bottom: 3px solid var(--color-primary-light);
   display: inline-block;
+  text-shadow: none;
 }
 .section-description {
   font-size: 1.1rem;
   color: white;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.9);
+  /* text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.9); */
   margin-bottom: 40px;
   max-width: 900px;
   text-align: center;
@@ -211,9 +212,9 @@
   border-bottom: 1px solid var(--color-primary-light);
 }
 .freelance-card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 20px 40px var(--color-shadow);
   border-color: var(--color-primary-dark);
+  box-shadow: 0 10px 10px rgba(27, 27, 27, 0.418);
 }
 .project-name {
   font-size: 1.3rem;
