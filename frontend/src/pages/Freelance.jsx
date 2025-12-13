@@ -132,6 +132,13 @@ const Freelance = ({ onQuoteRequest }) => {
               link: "https://paxterra.vercel.app/",
               image: "/paxterra-bg.png",
             },
+            {
+              name: "At-My-Table",
+              description:
+                "IN PROGRESS: A full-stack personalized recipe planning app designed for family, friends, and future users. The experience feels like stepping into your own digital kitchen, where users can drag and drop recipes onto a calendar to plan meals effortlessly. As meals are scheduled, the app automatically generates a grocery list for the selected days. Users can favorite and share recipes, track daily nutrition totals, and build healthier habits while saving time and money in the kitchen. https://at-my-table.vercel.app/user is a demo dashboard at this current version.",
+              link: "https://at-my-table.vercel.app",
+              image: "/at-my-table.png",
+            },
           ].map((project, index) => (
             <a
               key={index}

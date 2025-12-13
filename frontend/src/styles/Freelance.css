@@ -245,9 +245,6 @@
 .project-link:hover {
   color: var(--color-primary-light);
 }
-.project-link span {
-}
-
 @media (max-width: 900px) {
   .hero-title {
     font-size: 2.8rem;
